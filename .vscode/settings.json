@@ -1,0 +1,19 @@
+{
+    "SAP HANA Database Explorer.ShowXsAdvancedConnections": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "photo",
+            "database": "${workspaceFolder:photoapp}/db.sqlite"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "MySQLite",
+            "database": "${workspaceFolder:photoapp}/db.sqlite"
+        }
+    ],
+    "SAP HANA SQLScript LSP.URL": "https://cf-us10-001.cf.hana-tooling.ingress.orchestration.prod-us10.hanacloud.ondemand.com/hrtt-service",
+    "SAP HANA SQLScript LSP.XsAdvancedHrttServiceUrl": ""
+}

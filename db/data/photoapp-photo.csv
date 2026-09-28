@@ -1,0 +1,6 @@
+PhotoID,LocationID,MemberID,Title,Description,Privacy,UploadDate,view,ImagePath
+1,1,1,Beach Sunset,Evening beach view,Public,2026-01-10,120,/images/beach.jpg
+2,2,2,City Lights,Night city skyline,Public,2026-02-15,240,/images/city.jpg
+3,3,3,Lake View,Beautiful lake scenery,Private,2026-03-20,85,/images/lake.jpg
+4,4,4,Forest Trail,Green forest path,Public,2026-04-12,170,/images/forest.jpg
+5,5,5,Mountain Peak,Snowy mountain top,Public,2026-05-18,310,/images/mountain.jpg

@@ -1,0 +1,13 @@
+VIEW CatalogServices_AddressSrv AS SELECT
+  Addresses_0.STREET,
+  Addresses_0.POSTAL_CODE,
+  Addresses_0.CITY,
+  Addresses_0.COUNTRY,
+  Addresses_0.BUILDING,
+  Addresses_0.NODE_KEY,
+  Addresses_0.ADDRESS_KEY,
+  Addresses_0.VAL_START,
+  Addresses_0.VAL_END,
+  Addresses_0.LATITUDE,
+  Addresses_0.LONGITUDE
+FROM photoapp_db_Master_Addresses AS Addresses_0

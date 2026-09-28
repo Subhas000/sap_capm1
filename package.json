@@ -1,0 +1,19 @@
+{
+  "name": "photoapp",
+  "version": "1.0.0",
+  "description": "Welcome to your new CAP project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@cap-js/hana": "^3",
+    "@sap/cds": "^10.1.0",
+    "@sap/hdi-deploy": "^5.7.0",
+    "hdb": "^2.29.6"
+  }
+}

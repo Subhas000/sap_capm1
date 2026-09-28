@@ -1,0 +1,199 @@
+###
+###
+GET http://localhost:4004/odata/v4/catalog-services/ProductSrv
+
+###
+GET http://localhost:4004/odata/v4/catalog-services/EmployeeSrv
+###
+POST http://localhost:4004/odata/v4/catalog-services/createEmployee
+Content-Type: application/json
+
+{
+    
+  "Currency_code": "USD",
+  "ID": "9f8b7c6d-5a4e-4b3c-9d2f-1e0a7b6c5r5f",
+  "accountNumber": "ACC12345678",
+  "bankId": "HDFC001",
+  "bankName": "HDFC Bank",
+  "email": "rama.murthy@example.com",
+  "gender": "M",
+  "language": "EN",
+  "loginName": "RAMAM",
+  "nameFirst": "Rama",
+  "nameInitials": "R",
+  "nameLast": "Murthy",
+  "nameMiddle": "Krishna",
+  "phoneNumber": "+919898989898",
+  "salaryAmount": "45000.00"
+
+}
+
+###
+
+POST http://localhost:4004/odata/v4/catalog-services/updateEmployee
+Content-Type: application/json
+
+{
+    "ID": "2a5776ec-e711-4c11-a92a-2da5b46c40a4",
+    "salaryAmount": "50000.00",
+    "Currency_code": "USD"
+}
+
+###
+
+POST http://localhost:4004/odata/v4/catalog-services/createProduct
+Content-Type: application/json
+
+{
+    "NODE_KEY": "123e4567-e89b-12d3-a456-426614174000",
+    "PRODUCT_ID": "P1001",
+    "TYPE_CODE": "EL",
+    "CATEGORY": "Electronics",
+    "DESCRIPTION": "Laptop",
+    "TAX_TARIF_CODE": 18,
+    "MEASURE_UNIT": "EA",
+    "WEIGHT_MEASURE": 2.50,
+    "WEIGHT_UNIT": "KG",
+    "PRICE": 55000.00,
+    "CURRENCY_CODE": "USD",
+    "WIDTH": 35.50,
+    "DEPTH": 25.00,
+    "HEIGHT": 2.50,
+    "DIM_UNIT": "CM"
+}
+
+###
+
+POST http://localhost:4004/odata/v4/catalog-services/updateProduct
+Content-Type: application/json
+
+{
+    "NODE_KEY": "123e4567-e89b-12d3-a456-426614174000",
+    "PRICE": 75000.00,
+    "CURRENCY_CODE": "USD"
+}
+
+###
+
+POST http://localhost:4004/odata/v4/catalog-services/deleteEmployee
+Content-Type: application/json
+
+{
+    "ID": "2a5776ec-e711-4c11-a92a-2da5b46c40e3"
+}
+
+###
+GET http://localhost:4004/odata/v4/catalog-services/ProductSrv/$count
+
+###
+GET http://localhost:4004/odata/v4/catalog-services/ProductSrv?$filter
+
+###
+GET http://localhost:4004/odata/v4/catalog-services/ProductSrv?$top=10
+
+###
+GET http://localhost:4004/odata/v4/catalog-services/ProductSrv?$top=10&$skip=10
+
+###
+GET http://localhost:4004/odata/v4/catalog-services/ProductSrv?$filter=CATEGORY eq 'Notebooks'& DM_UNIT eq 'CM'
+
+###
+GET http://localhost:4004/odata/v4/catalog-services/ProductSrv?$select=PRODUCT_ID,DESCRIPTION,CATEGORY,PRICE
+
+###
+GET http://localhost:4004/odata/v4/catalog-services/ProductSrv?$orderby=PRODUCT_ID desc
+
+//Select all category names with their descriptions from the Categories table.
+
+###
+GET http://localhost:4004/odata/v4/catalog-services/ProductSrv?$select=CATEGORY,DESCRIPTION
+
+//Select the contact name, customer id, and company name of all Customers in London
+GET http://localhost:4004/odata/v4/catalog-services/ProductSrv?$select=
+###
+
+http://localhost:4004/odata/v4/catalog-services/ProductSrv?$select=CATEGORY,DESCRIPTION
+
+###
+http://localhost:4004/odata/v4/catalog-services/ProductSrv('74867AD200E41EDBA5D8B06B26F8C052')/PRODUCT_ID
+
+###
+http://localhost:4004/odata/v4/catalog-services/ProductSrv('74867AD200E41EDBA5D8B06B26F8C052')/PRODUCT_ID/$value
+
+###
+http://localhost:4004/odata/v4/catalog-services/PurchaseOrderSrv?$expand=Items
+
+
+###
+https://services.odata.org/V4/Northwind/Northwind.svc/Categories
+
+
+###
+PUT http://localhost:4004/odata/v4/catalog-services/EmployeeSrv/9f8b7c6d-5a4e-4b3c-9d2f-1e0a7b6c5r5f
+Content-Type: application/json
+
+{
+  "salaryAmount": 105000,
+   "Currency_code": "USD"
+}
+
+###
+PUT http://localhost:4004/odata/v4/catalog-services/ProductSrv/123e4567-e89b-12d3-a456-426614174000
+Content-Type: application/json
+
+{
+    "PRICE": 105000,
+    "CURRENCY_CODE": "USD"
+
+}
+
+###
+PUT http://localhost:4004/odata/v4/catalog-services/EmployeeSrv/9f8b7c6d-5a4e-4b3c-9d2f-1e0a7b6c5r5f
+Content-Type: application/json
+ 
+{
+    "phoneNumber": "+9442071234567"
+}
+ 
+###
+GET http://localhost:4004/odata/v4/catalog-services/getHighestSalariedEmployees()
+
+###
+GET http://localhost:4004/odata/v4/catalog-services/getHeighestPricedProduct()
+
+###
+POST http://localhost:4004/odata/v4/catalog-services/EmployeeSrv
+Content-Type: application/json
+
+{
+    "Currency_code": "USD",
+  "ID": "9f8b7c6d-5a4e-4b3c-9d2f-1e0a7b6c5r5f",
+  "salaryAmount": "55000.00"
+}
+
+###
+GET http://localhost:4004/odata/v4/catalog-services/PurchaseOrderSrv/74867AD200E41EDBA5D8B0C98DC28052/discountPrice
+
+###
+POST http://localhost:4004/odata/v4/catalog-services/ProductSrv/74867AD200E41EDBA5D8B06B26EBC052/increasePrice
+Content-Type: application/json
+ 
+{}
+
+###
+POST http://localhost:4004/odata/v4/catalog-services/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C19787FB/increaseSalary
+Content-Type: application/json
+
+{}
+
+###
+GET http://localhost:4004/odata/v4/catalog-services/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C19787FB/increaseSalary
+
+###
+GET http://localhost:4004/odata/v4/catalog-services/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C19787FB/top20HighestPaid()
+
+
+###
+GET http://localhost:4004/odata/v4/catalog-services/getUtilities()
+
+
