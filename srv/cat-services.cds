@@ -3,7 +3,7 @@ using { photoapp.common as common } from '../db/common';
 
 service CatalogServices {
 
-    // Master Data
+    
     @Capabilities : {
     InsertRestrictions.Insertable : true,
     UpdateRestrictions.Updatable : true,
